@@ -1,7 +1,19 @@
 <template lang="pug">
-  .p-icon__close
+  .p-icon__close(
+    @click="onClick"
+  )
     i.fas.fa-times
 </template>
+
+<script>
+export default {
+  methods: {
+    onClick() {
+      this.$emit("on-click")
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .p-icon__close {

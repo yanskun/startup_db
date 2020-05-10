@@ -1,8 +1,14 @@
 <template lang="pug">
   .l-separete
     aside#modal.l-aside.p-aside__area.js-modal
+    RegistModal(
+      :modalShow="registModalShow"
+      @close-modal="closeRegistModal"
+    )
     main.l-main.p-main__areaIndex
-      Banner
+      Banner(
+        @on-click="openRegistModal"
+      )
       search-button
       daily-rank
       db-media
@@ -13,12 +19,27 @@ import Banner from "../components/organisms/Banner"
 import SearchButton from "../components/atoms/SearchButton"
 import DailyRank from "../components/organisms/DailyRank"
 import DbMedia from "../components//organisms//DbMedia"
+import RegistModal from '../components/organisms/Modal/Regist'
 export default {
   components: {
     Banner,
     SearchButton,
     DailyRank,
-    DbMedia
+    DbMedia,
+    RegistModal
+  },
+  data() {
+    return {
+      registModalShow: false
+    }
+  },
+  methods: {
+    openRegistModal() {
+      this.registModalShow = true
+    },
+    closeRegistModal() {
+      this.registModalShow = false
+    }
   },
 }
 </script>

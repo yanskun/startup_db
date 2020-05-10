@@ -1,5 +1,7 @@
 <template lang="pug">
-  .p-banner__area.p-banner__register
+  .p-banner__area.p-banner__register(
+    @click="onClick"
+  )
     Content
     .p-banner__img(
       :style="{ backgroundImage: 'url('+ imgUrl +')' }"
@@ -15,6 +17,11 @@ export default {
   data() {
     return {
       imgUrl: 'https://startup-db.com/images/pc_top_kv_follow_banner.jpg'
+    }
+  },
+  methods: {
+    onClick() {
+      this.$emit("on-click")
     }
   },
 }

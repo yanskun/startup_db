@@ -1,14 +1,18 @@
 <template lang="pug">
   .p-modal__regist(
-    v-if="isShow"
+    v-if="modalShow"
   )
-    .p-modalRay
+    .p-modalRay(
+      @click.self="closeModal"
+    )
     .p-modal__area.is-regist__default
       .p-modal__header.p-modal__icon(
         :style="{ backgroundImage: 'url('+ bgImg +')' }"
       )
         h2.p-modal__title {{ getTitle }}
-        close-button
+        close-button(
+          @on-click="closeModal"
+        )
       regist-content(
         @on-click="onClick"
         :isRegisterd="isRegisterd"
@@ -23,9 +27,14 @@ export default {
     CloseButton,
     RegistContent
   },
+  props: {
+    modalShow: {
+      type: Boolean,
+      required: true
+    }
+  },
   data() {
     return {
-      isShow: true,
       isRegisterd: true,
       bgImg: "https://startup-db.com/images/bg_startupdb.png",
     }
@@ -38,6 +47,9 @@ export default {
   methods: {
     onClick() {
       this.isRegisterd = !this.isRegisterd
+    },
+    closeModal() {
+      this.$emit("close-modal")
     }
   }
 }
