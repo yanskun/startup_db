@@ -1,18 +1,17 @@
 <template lang="pug">
   .l-inner.p-footerNavi
-    ul.p-footerNavi__wrap(
-      v-for="option in options"
-    )
-      footer-navi-item(
+    ul.p-footerNavi__wrap
+      navi-item(
+        v-for="option in options"
         :option="option"
       )
 </template>
 
 <script>
-import FooterNaviItem from "../../atoms/Footer/NaviItem"
+import NaviItem from "../../atoms/Footer/NaviItem"
 export default {
   components: {
-    FooterNaviItem
+    NaviItem
   },
   data() {
     return {
@@ -50,3 +49,15 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.p-footerNavi__wrap {
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+</style>

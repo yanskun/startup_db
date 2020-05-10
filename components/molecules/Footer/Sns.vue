@@ -1,18 +1,17 @@
 <template lang="pug">
   .p-footerSns
-    ui.p-footerSns__wrap(
-      v-for="option in options"
-    )
-      footer-sns-item(
+    ul.p-footerSns__wrap
+      sns-item(
         :option="option"
+        v-for="option in options"
       )
 </template>
 
 <script>
-import FooterSnsItem from "../../atoms/Footer/SnsItem"
+import SnsItem from "../../atoms/Footer/SnsItem"
 export default {
   components: {
-    FooterSnsItem
+    SnsItem
   },
   data() {
     return {
@@ -24,7 +23,7 @@ export default {
         },
         {
           class: "p-facebook",
-          iconClass: "fa-facebook",
+          iconClass: "fa-facebook-f",
           path: "https://www.facebook.com/startupdbjp/"
         }
       ]
@@ -32,3 +31,12 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.p-footerSns__wrap {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-bottom: 35px;
+}
+</style>

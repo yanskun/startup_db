@@ -1,10 +1,9 @@
 <template lang="pug">
   nav.p-headerNavi
-    ul.p-headerNavi__primary(
-      v-for="option in options"
-    )
+    ul.p-headerNavi__primary
       navi-item(
         :option="option"
+        v-for="option in options"
       )
 </template>
 
@@ -40,16 +39,34 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.p-headerNavi__primary .p-headerNavi__item a::after {
+.p-headerNavi {
+  -webkit-box-ordinal-group: 3;
+  order: 2;
+  flex-basis: 35%;
+}
+.p-headerNavi {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+}
+.p-headerNavi__item a::after {
   content: "";
   width: 0;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border-bottom: 2px solid #fff;
   display: block;
   position: absolute;
   bottom: 0;
   left: 0;
+}
+.p-headerNavi__primary {
+  padding-left: 3%;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+}
+.p-headerNavi__primary {
+  display: flex;
+  width: 100%;
 }
 </style>

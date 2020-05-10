@@ -1,29 +1,34 @@
 <template lang="pug">
   footer.p-footer__area
-    .p-btn__scrollUp
-    footer-navi
+    scroll-up
     .p-footer__wrap
-      footer-sns
-      footer-lang
+      navi
+      sns
+      lang
     copy-right
 </template>
 
 <script>
-import FooterNavi from '../molecules/Footer/Navi'
-import FooterSns from '../molecules/Footer/Sns'
-import FooterLang from '../molecules/Footer/Lang'
+import ScrollUp from '../atoms/Footer/ScrollUp'
+import Navi from '../molecules/Footer/Navi'
+import Sns from '../molecules/Footer/Sns'
+import Lang from '../molecules/Footer/Lang'
 import CopyRight from '../molecules/Footer/CopyRight'
 export default {
   components: {
-    FooterNavi,
-    FooterSns,
-    FooterLang,
+    ScrollUp,
+    Navi,
+    Sns,
+    Lang,
     CopyRight
   }
 }
 </script>
 
 <style lang="scss" scoped>
+.p-footer__area {
+    background-color: #333;
+}
 .p-footer__wrap {
   padding: 30px 0 10px;
   text-align: center;

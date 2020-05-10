@@ -1,8 +1,9 @@
 <template lang="pug">
-  li.is-current
+  li.p-headerNavi__item
     nuxt-link(
       v-if="getPath"
       :to="option.path"
+      class="is-current"
     ) {{ option.name }}
     a(
       v-else
@@ -25,3 +26,31 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.p-headerNavi__item {
+  margin: 0 12px;
+}
+.p-headerNavi__item a {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  padding: .8rem 0;
+}
+.p-headerNavi__item a {
+  font-weight: 700;
+  display: block;
+  color: #fff;
+  word-break: keep-all;
+  position: relative;
+}
+.p-headerNavi__item a::after {
+  content: "";
+  width: 0;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid #fff;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+</style>

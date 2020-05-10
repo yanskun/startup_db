@@ -3,6 +3,7 @@
     a(
       :class="option.class"
       :href="option.path"
+      target="_blank"
     )
       i.fab(
         :class="option.iconClass"
@@ -25,18 +26,13 @@ export default {
   padding: 0 10px;
 }
 .p-footerSns__item a {
-  display: block;
   width: 36px;
   border-radius: 50%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   padding: 9px;
   color: #9b9b9b;
   border: 1px solid #9b9b9b;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
 }
