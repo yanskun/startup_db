@@ -8,7 +8,6 @@
 
 <script>
 import Content from "../molecules/Banner/Content"
-import backgroundImg from "../../assets/images/pc_top_kv_follow_banner.jpg"
 export default {
   components: {
     Content

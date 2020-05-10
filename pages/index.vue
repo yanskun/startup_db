@@ -2,14 +2,23 @@
   .l-separete
     main.l-main.p-main__areaIndex
       Banner
+      search-button
+      daily-rank
+      db-media
 </template>
 
 <script>
 import Banner from "../components/organisms/Banner"
+import SearchButton from "../components/atoms/SearchButton"
+import DailyRank from "../components/organisms/DailyRank"
+import DbMedia from "../components//organisms//DbMedia"
 export default {
   components: {
-    Banner
-  }
+    Banner,
+    SearchButton,
+    DailyRank,
+    DbMedia
+  },
 }
 </script>
 
@@ -21,7 +30,6 @@ export default {
 }
 .l-main {
   min-width: 0;
-  width: 100%;
   -webkit-box-ordinal-group: 3;
   order: 2;
 }

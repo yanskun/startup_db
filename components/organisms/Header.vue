@@ -35,6 +35,5 @@ export default {
   align-items: center;
   -webkit-box-pack: justify;
   justify-content: space-between;
-  width: 100%;
 }
 </style>
