@@ -2,8 +2,8 @@
   .l-separete
     aside#modal.l-aside.p-aside__area.js-modal
     RegistModal(
-      :modalShow="registModalShow"
       @close-modal="closeRegistModal"
+      ref="regist"
     )
     main.l-main.p-main__areaIndex
       Banner(
@@ -28,17 +28,12 @@ export default {
     DbMedia,
     RegistModal
   },
-  data() {
-    return {
-      registModalShow: false
-    }
-  },
   methods: {
-    openRegistModal() {
-      this.registModalShow = true
+    openRegistModal(_type) {
+      this.$refs.regist.modalShow = true
     },
     closeRegistModal() {
-      this.registModalShow = false
+      this.$refs.regist.modalShow = false
     }
   },
 }

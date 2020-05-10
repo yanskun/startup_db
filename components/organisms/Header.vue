@@ -3,18 +3,35 @@
     .l-inner.p-headerInner
       logo
       navi-left
-      navi-right
+      navi-right(
+        @open-regist-modal="openRegistModal"
+      )
+    regist-modal(
+      @close-modal="closeRegistModal"
+      ref="regist"
+    )
 </template>
 
 <script>
 import Logo from '../atoms/Header/Logo'
 import NaviLeft from '../molecules/Header/NaviLeft'
 import NaviRight from '../molecules/Header/NaviRight'
+import RegistModal from './Modal/Regist'
 export default {
   components: {
     Logo,
     NaviLeft,
-    NaviRight
+    NaviRight,
+    RegistModal
+  },
+  methods: {
+    openRegistModal(_type) {
+      this.$refs.regist.isRegisterd = (_type === "regist")
+      this.$refs.regist.modalShow = true
+    },
+    closeRegistModal() {
+      this.$refs.regist.modalShow = false
+    }
   }
 }
 </script>

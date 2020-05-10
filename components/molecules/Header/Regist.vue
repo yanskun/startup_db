@@ -1,10 +1,24 @@
 <template lang="pug">
   .p-headerNavi__regist.c-btn__separate
     .p-headerNavi__login
-      button.p-btn__login ログイン
+      button.p-btn__login(
+        @click="openRegistModal('login')"
+      ) ログイン
     .p-headerNavi__regist
-      button.p-btn__regist 会員登録
+      button.p-btn__regist(
+        @click="openRegistModal('regist')"
+      ) 会員登録
 </template>
+
+<script>
+export default {
+  methods: {
+    openRegistModal(type) {
+      this.$emit("open-regist-modal", type)
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .c-btn__separate {

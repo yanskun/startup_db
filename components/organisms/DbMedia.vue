@@ -7,6 +7,7 @@
         :option="mainOption"
       )
       .p-media__sub
+        //- FIXME: おそらく sub と main で同一のコンポーネントを使うことが可能
         media-article-sub(
           v-for="option in subOptions"
           :option="option"
@@ -23,6 +24,7 @@ export default {
   },
   data() {
     return {
+      // TODO: mapAction で取得する前に、main, sub で振り分ける必要あり
       mainOption: {
         class: "main",
         title: "日本のDeepTechの火付け役リバネス丸氏と井上氏が語る「知識プラットフォームと人類の課題解決」",

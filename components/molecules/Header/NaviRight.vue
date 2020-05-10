@@ -1,7 +1,9 @@
 <template lang="pug">
   .u-flex.p-headerNavi
     search
-    regist
+    regist(
+      @open-regist-modal="openRegistModal"
+    )
     secondary
     .p-close__icon(
       style="display: none;"
@@ -18,7 +20,12 @@ export default {
     Search,
     Regist,
     Secondary
-  }
+  },
+  methods: {
+    openRegistModal(type) {
+      this.$emit("open-regist-modal", type)
+    }
+  },
 }
 </script>
 

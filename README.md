@@ -1,22 +1,30 @@
-# startupDb
+# 技術課題
 
-> technical test
+## やったこと
 
-## Build Setup
+- STARTUP DB の top 画面の LP
+  - 登録モーダル
+  開いて閉じるだけ。
+  - スクロールアップ
 
-```bash
-# install dependencies
-$ yarn install
+## やれてないこと
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+### 間に合わなかったこと
 
-# build for production and launch server
-$ yarn build
-$ yarn start
+- TOP ページ以外
+- データベース検索モーダル
+- サイドバー
+- STARTUP DB MEDIA のリファクタ  
+[対象](https://github.com/yasudanaoya/startup_db/blob/dad93676953b26a05c279327ef0c94d4d322b1ae/components/organisms/DbMedia.vue)
 
-# generate static project
-$ yarn generate
-```
+## 追加ライブラリ
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+- [pug](https://www.npmjs.com/package/pug)  
+pug で書くことに慣れているため
+かつ、シンタックスを気にしなくてよくなるため
+- [node-sass](https://www.npmjs.com/package/node-sass)  
+scss で書くのに慣れているため  
+かつ、css より扱いやすい認識があるため（違いを細かくは理解できておりません。）  
+- [nuxt-fontawesome](https://www.npmjs.com/package/nuxt-fontawesome)  
+icon を使うため
+- その他、依存関係のあるものや、関連プラグイン

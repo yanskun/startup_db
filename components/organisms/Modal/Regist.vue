@@ -27,14 +27,9 @@ export default {
     CloseButton,
     RegistContent
   },
-  props: {
-    modalShow: {
-      type: Boolean,
-      required: true
-    }
-  },
   data() {
     return {
+      modalShow: false,
       isRegisterd: true,
       bgImg: "https://startup-db.com/images/bg_startupdb.png",
     }
