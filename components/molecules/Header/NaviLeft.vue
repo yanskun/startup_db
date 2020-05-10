@@ -3,16 +3,16 @@
     ul.p-headerNavi__primary(
       v-for="option in options"
     )
-      nav-link(
+      navi-item(
         :option="option"
       )
 </template>
 
 <script>
-import NavLink from "../atoms/NavLink"
+import NaviItem from "../../atoms/Header/NaviItem"
 export default {
   components: {
-    NavLink
+    NaviItem
   },
   data() {
     return {

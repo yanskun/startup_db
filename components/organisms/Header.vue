@@ -1,17 +1,17 @@
 <template lang="pug">
   header.l-container.p-globalNavi
     .l-inner.p-headerInner
-      header-logo
-      header-nav
+      logo
+      navi-left
 </template>
 
 <script>
-import HeaderLogo from '../atoms/HeaderLogo'
-import HeaderNav from '../molecules/HeaderNav'
+import Logo from '../atoms/Header/Logo'
+import NaviLeft from '../molecules/Header/NaviLeft'
 export default {
   components: {
-    HeaderLogo,
-    HeaderNav
+    Logo,
+    NaviLeft
   }
 }
 </script>
