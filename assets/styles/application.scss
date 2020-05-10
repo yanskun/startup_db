@@ -219,3 +219,11 @@ section {
     }
   }
 }
+.u-flex__center {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}

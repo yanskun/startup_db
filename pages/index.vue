@@ -1,5 +1,6 @@
 <template lang="pug">
   .l-separete
+    aside#modal.l-aside.p-aside__area.js-modal
     main.l-main.p-main__areaIndex
       Banner
       search-button
@@ -23,6 +24,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.p-aside__area {
+  background-color: #fff0;
+  box-shadow: 0 16px 16px 0 rgba(0,0,0,0.24), 0 0 16px 0 rgba(0,0,0,0.18);
+  position: relative;
+  z-index: 2;
+}
+.l-aside {
+  max-width: 290px;
+  -webkit-box-ordinal-group: 2;
+  order: 1;
+  width: 100%;
+}
 .p-main__areaIndex {
   padding: 32px;
   padding-top: 0;
